@@ -1,4 +1,4 @@
-🧠 1. Purpose of the Simulation
+# 🧠 1. Purpose of the Simulation
 The simulation’s objective is to:
 
 Simulate the flow of traffic through a four-way intersection.
@@ -9,7 +9,7 @@ Represent different vehicle types—cars, buses, trucks, rickshaws, and bikes—
 
 Visually display the traffic movement and signal status using Pygame.
 
-🏗️ 2. Library Imports and Initial Setup
+# 🏗️ 2. Library Imports and Initial Setup
 At the top, the code imports essential libraries:
 
 pygame handles rendering and animation.
@@ -26,7 +26,7 @@ Signal status for each of the four roads (right, down, left, up).
 
 Coordinates for where vehicles should stop, move, or turn.
 
-🚦 3. Class: TrafficSignal
+# 🚦 3. Class: TrafficSignal
 The TrafficSignal class encapsulates the properties of a traffic light:
 
 It stores timing details like red, yellow, and green durations.
@@ -35,7 +35,7 @@ Also tracks total green time used.
 
 Multiple TrafficSignal objects are created for each direction.
 
-🚗 4. Class: Vehicle
+# 🚗 4. Class: Vehicle
 The Vehicle class is a pygame.sprite.Sprite subclass that represents each moving object on the road:
 
 A vehicle knows its lane, direction, type (like car or bus), speed, and turning intent.
@@ -50,7 +50,7 @@ It handles straight movement or turning, including animations like rotation.
 
 Movement also respects traffic signal status—stopping at red, and advancing at green.
 
-🧠 5. Dynamic Signal Timing with setTime()
+# 🧠 5. Dynamic Signal Timing with setTime()
 This function estimates how long the next green signal should last based on how many and what type of vehicles are waiting.
 
 The formula used factors in:
@@ -63,7 +63,7 @@ Lane count.
 
 This mimics intelligent traffic systems which adjust green light duration based on real-time conditions.
 
-🔁 6. Main Simulation Loop: repeat()
+# 🔁 6. Main Simulation Loop: repeat()
 This function continuously cycles through the signal lights:
 
 Sets green, yellow, and red status with corresponding timers.
@@ -72,7 +72,7 @@ Calls setTime() when the signal is about to switch to dynamically calculate gree
 
 Updates vehicle stop positions between cycles.
 
-🧾 7. Support Functions
+# 🧾 7. Support Functions
 printStatus() logs current signal statuses to the console.
 
 updateValues() reduces the timers every second.
@@ -81,7 +81,7 @@ generateVehicles() continuously creates random vehicles at random lanes and dire
 
 simulationTime() tracks the total time of the simulation and calculates throughput (vehicles per second).
 
-🖼️ 8. Class: Main – The Simulation Renderer
+# 🖼️ 8. Class: Main – The Simulation Renderer
 This class sets up the graphical window and starts all background threads:
 
 It loads the background, signals, fonts, and vehicle images.
@@ -100,7 +100,7 @@ Vehicle generation (generateVehicles)
 
 Elapsed time tracking (simulationTime)
 
-🎮 9. Running the Simulation
+# 🎮 9. Running the Simulation
 When Main() is called at the bottom of the script:
 
 The simulation begins.
@@ -111,7 +111,7 @@ Signal states change dynamically.
 
 Vehicles move or turn based on signal status and their own logic.
 
-🎤 Closing Notes
+# 🎤 Closing Notes
 This simulation demonstrates:
 
 Object-oriented programming with Pygame.
